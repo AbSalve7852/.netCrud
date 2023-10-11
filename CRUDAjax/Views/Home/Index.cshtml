@@ -1,0 +1,102 @@
+﻿@model CRUDAjax.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee System</title>
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/employee.js"></script>
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <link rel="icon" href="~/Content/favi.ico" type="image/x-icon" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Employees Record</h2>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">
+            <i class="fas fa-user-plus" style='font-size:20px'></i> Add New Employee
+        </button>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Phone
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        City
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+            </tbody>
+        </table>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    @*<button type="button" class="close" data-dissmiss="modal"><span aria-hidden="true">&times;</span></button>*@
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Add Employee</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="EmployeeId">ID</label>
+                            <input type="text" class="form-control" id="EmployeeID" placeholder="Id" disabled="disabled" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Name">Name:</label>
+                            <input type="text" class="form-control" id="Name">
+                            <span id="NameError" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="Phone">Phone:</label>
+                            <input type="text" class="form-control" id="Phone">
+                            <span id="PhoneError" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email:</label>
+                            <input type="text" class="form-control" id="Email">
+                            <span id="EmailError" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="City">City:</label>
+                            <input type="text" class="form-control" id="City">
+                            <span id="CityError" class="text-danger"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Add</button>
+                    <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="Update();">Update</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>        
+    </div>
+</body>
+</html>

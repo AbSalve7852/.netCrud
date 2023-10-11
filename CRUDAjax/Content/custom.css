@@ -1,0 +1,57 @@
+﻿/* custom.css */
+
+/* Style the container */
+.container {
+    margin-top: 20px;
+}
+
+/* Style the table */
+.table {
+    margin-top: 20px;
+}
+
+/* Style the modal */
+.modal-dialog {
+    margin-top: 100px;
+}
+
+/* Add some padding to the modal body */
+.modal-body {
+    padding: 20px;
+}
+
+/* Style the modal title */
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style the form labels */
+.form-group label {
+    font-weight: bold;
+}
+
+/* Add some space between form elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Style the form inputs */
+.form-control {
+    border-radius: 0;
+}
+
+/* Style the error messages */
+.text-danger {
+    font-size: 12px;
+}
+
+/* Style the buttons */
+.btn-primary {
+    border-radius: 0;
+}
+
+/* Add some space between buttons */
+.btn {
+    margin-right: 10px;
+}
